@@ -104,4 +104,10 @@ public class CalculatorTest {
             exception.getMessage()
         );
     }
+    @Order(5)
+    @Test
+    @DisplayName("100 / 2 = 50")
+    void testDivideByNonzeroNumber() {
+        assertEquals(50, calculator.divide(100, 2));
+    }
 }
